@@ -7,6 +7,7 @@
 #include "lower.h"
 #include "upper.h"
 #include "trapezoid.h"
+#include "checkerboard3x3.h"
 
 int main(){
   //Task A -> print a box with given width and height
@@ -57,12 +58,23 @@ int main(){
   std::cout << checkerboard << std::endl;
 
   //Task C -> Print a diagonal cross with given size
+  //Test 1
   int size = 5;
 
   std::cout << "\nTask C:\nInput size: " << size << std::endl;
   std::cout << "\nresult\n----------------------------\n" << std::endl;
   
   std::string cross;
+  cross = makeCross(size);
+
+  std::cout << cross << std::endl;
+
+  //Test 3
+  size = 18;
+
+  std::cout << "Input size: " << size << std::endl;
+  std::cout << "\nresult\n----------------------------\n" << std::endl;
+  
   cross = makeCross(size);
 
   std::cout << cross << std::endl;
@@ -94,7 +106,7 @@ int main(){
   width = 15;
   height = 4;
   
-  std::cout << "\nTask f:\nInput width: " << width << "\nInput height: " << height << std::endl;
+  std::cout << "\nTask F:\nInput width: " << width << "\nInput height: " << height << std::endl;
   std::cout << "\nresult\n----------------------------\n" << std::endl;
   
   std::string trap;
@@ -132,7 +144,30 @@ int main(){
   trap = makeTrap(width, height);
 
   std::cout << trap << std::endl;
+  
+  //Task G -> print 3x3 square checkerboard given width and height
+  //Test 1
+  width = 11;
+  height = 15;
+  
+  std::cout << "\nTask G:\nInput width: " << width << "\nInput height: " << height << std::endl;
+  std::cout << "\nresult\n----------------------------\n" << std::endl;
+  
+  std::string board;
+  board = checkerBoard(width, height);
 
+  std::cout << board << std::endl;
+
+  //Test 2
+  width = 8;
+  height = 14;
+  
+  std::cout << "Input width: " << width << "\nInput height: " << height << std::endl;
+  std::cout << "\nresult\n----------------------------\n" << std::endl;
+  
+  board = checkerBoard(width, height);
+
+  std::cout << board << std::endl;
   
   return 0;
 }
