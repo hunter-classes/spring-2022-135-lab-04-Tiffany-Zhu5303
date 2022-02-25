@@ -159,8 +159,8 @@ int main(){
   std::cout << board << std::endl;
 
   //Test 2
-  width = 8;
-  height = 14;
+  width = 14;
+  height = 8;
   
   std::cout << "Input width: " << width << "\nInput height: " << height << std::endl;
   std::cout << "\nresult\n----------------------------\n" << std::endl;
