@@ -6,6 +6,7 @@
 #include "cross.h"
 #include "lower.h"
 #include "upper.h"
+#include "trapezoid.h"
 
 int main(){
   //Task A -> print a box with given width and height
@@ -56,7 +57,7 @@ int main(){
   std::cout << checkerboard << std::endl;
 
   //Task C -> Print a diagonal cross with given size
-  int size = 4;
+  int size = 5;
 
   std::cout << "\nTask C:\nInput size: " << size << std::endl;
   std::cout << "\nresult\n----------------------------\n" << std::endl;
@@ -87,6 +88,51 @@ int main(){
   upper = makeUpper(length);
 
   std::cout << upper << std::endl;
+
+  //Task F -> print upside down trapezoid/triangle given a width and height
+  //Test 1
+  width = 15;
+  height = 4;
+  
+  std::cout << "\nTask f:\nInput width: " << width << "\nInput height: " << height << std::endl;
+  std::cout << "\nresult\n----------------------------\n" << std::endl;
+  
+  std::string trap;
+  trap = makeTrap(width, height);
+
+  std::cout << trap << std::endl;
+
+  //Test 2
+  height = 11;
+
+  std::cout << "Input width: " << width << "\nInput height: " << height << std::endl;
+  std::cout << "\nresult\n----------------------------\n" << std::endl;
+  
+  trap = makeTrap(width, height);
+
+  std::cout << trap << std::endl;
+
+  //Test 3
+  width = 2;
+
+  std::cout << "Input width: " << width << "\nInput height: " << height << std::endl;
+  std::cout << "\nresult\n----------------------------\n" << std::endl;
+  
+  trap = makeTrap(width, height);
+
+  std::cout << trap << std::endl;
+
+  //Test 4
+  width = 12;
+  height = 6;
+
+  std::cout << "Input width: " << width << "\nInput height: " << height << std::endl;
+  std::cout << "\nresult\n----------------------------\n" << std::endl;
+  
+  trap = makeTrap(width, height);
+
+  std::cout << trap << std::endl;
+
   
   return 0;
 }
