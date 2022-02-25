@@ -2,19 +2,19 @@
 #include <iostream>
 
 std::string makeBoard(int width, int height){
-  char asteroid = '*';
+  char asterisk = '*';
   std::string line, altLine;
 
   //to create the first line
   for(int i = 1; i <= width; i++){
-    line += asteroid;
+    line += asterisk;
     line += " ";
   }
   
   //to create the alternating line
   for(int i = 1; i < width; i++){
     altLine += " ";
-    altLine += asteroid;
+    altLine += asterisk;
   }
 
   //to print the lines taking odd/even height into account
