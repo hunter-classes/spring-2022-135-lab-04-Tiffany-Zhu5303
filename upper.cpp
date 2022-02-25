@@ -2,18 +2,20 @@
 #include <iostream>
 
 std::string makeUpper(int length){
-  char asteroid = '*';
+  char asterisk = '*';
   std::string line = "";
   int count = 0;
+  std::string space = "";
 
   for(int i = 0; i < length; i++){
-    line += asteroid;
+    line += asterisk;
     count++;
   }
 
   for(int i = 0; i < length; i++){
-    std::cout << line << std::endl;
+    std::cout << space << line << std::endl;
     line = line.substr(1,std::string::npos);
+    space += " ";
   }
 
   return line;
